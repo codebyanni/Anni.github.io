@@ -1,167 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Aniruddha Panchal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Icons -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <!-- Typing effect -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <style>
-        :root {
-            --bg-light: #f2f2f2;
-            --bg-dark: #121212;
-            --text-light: #000;
-            --text-dark: #fff;
-        }
+  <meta charset="UTF-8" />
+  <title>Aniruddha Panchal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    :root {
+      --bg-light: #f2f2f2;
+      --bg-dark: #121212;
+      --text-light: #000;
+      --text-dark: #fff;
+    }
 
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            background-color: var(--bg-light);
-            color: var(--text-light);
-            margin: 0;
-            padding: 0;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      margin: 0;
+      padding: 0;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
 
-        .dark-mode {
-            background-color: var(--bg-dark);
-            color: var(--text-dark);
-        }
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
 
-        .container {
-            padding: 50px 20px;
-        }
+    .container {
+      padding: 50px 20px;
+    }
 
-        img {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            border: 4px solid #2196f3;
-            margin-bottom: 15px;
-        }
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #2196f3;
+      margin-bottom: 15px;
+    }
 
-        h1 {
-            margin: 10px 0;
-        }
+    h1 {
+      margin: 10px 0;
+    }
 
-        #typed {
-            color: #2196f3;
-            font-weight: bold;
-        }
+    #typed {
+      color: #2196f3;
+      font-weight: bold;
+    }
 
-        .icons a {
-            margin: 10px;
-            font-size: 24px;
-            color: inherit;
-            text-decoration: none;
-        }
+    .icons a {
+      margin: 10px;
+      font-size: 24px;
+      color: inherit;
+      text-decoration: none;
+    }
 
-        .toggle-btn {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #2196f3;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-        }
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #2196f3;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
 
-        .github-graph {
-            margin-top: 50px;
-        }
+    .github-graph {
+      margin-top: 50px;
+    }
 
-        iframe {
-            width: 100%;
-            max-width: 600px;
-            height: 200px;
-            border: none;
-        }
-    </style>
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 200px;
+      border: none;
+    }
+
     .terminal {
-    background: #111;
-    color: #33ff33;
-    text-align: left;
-    padding: 20px;
-    max-width: 600px;
-    margin: 40px auto;
-    font-family: monospace;
-    border-radius: 10px;
-    box-shadow: 0 0 20px #33ff33;
-}
+      background: #111;
+      color: #33ff33;
+      text-align: left;
+      padding: 20px;
+      max-width: 600px;
+      margin: 40px auto;
+      font-family: monospace;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #33ff33;
+    }
 
-.terminal-header {
-    color: #fff;
-    background: #222;
-    padding: 5px 10px;
-    font-weight: bold;
-}
+    .terminal-header {
+      color: #fff;
+      background: #222;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
 
-<button class="toggle-btn" onclick="toggleMode()">Toggle Theme</button>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Theme</button>
 
-<div class="container">
-    <img src="IMG_4843.jpeg" alt="My Photo">
+  <div class="container">
+    <img src="IMG_4843.jpeg" alt="My Photo" />
     <h1>Aniruddha Panchal</h1>
     <span id="typed"></span>
 
     <div class="icons">
-        <a href="https://github.com/codebyanni/project1" target="_blank"><i class="fas fa-code"></i> Project 1</a>
-        <a href="https://github.com/codebyanni/project2" target="_blank"><i class="fas fa-laptop-code"></i> Project 2</a>
-        <a href="https://github.com/codebyanni" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://github.com/codebyanni/project1" target="_blank"><i class="fas fa-code"></i> Project 1</a>
+      <a href="https://github.com/codebyanni/project2" target="_blank"><i class="fas fa-laptop-code"></i> Project 2</a>
+      <a href="https://github.com/codebyanni" target="_blank"><i class="fab fa-github"></i> GitHub</a>
     </div>
 
     <div class="github-graph">
-        <h3>GitHub Contributions</h3>
-        <iframe src="https://ghchart.rshah.org/2196f3/codebyanni"></iframe>
+      <h3>GitHub Contributions</h3>
+      <iframe src="https://ghchart.rshah.org/2196f3/codebyanni"></iframe>
     </div>
-</div>
 
-<script>
+    <!-- Terminal effect -->
+    <div class="terminal">
+      <div class="terminal-header">Terminal</div>
+      <div id="terminal-content"></div>
+    </div>
+  </div>
+
+  <script>
     new Typed('#typed', {
-        strings: ['Web Developer', 'Linux Learner', 'Open Source Lover'],
-        typeSpeed: 60,
-        backSpeed: 30,
-        loop: true
+      strings: ['Web Developer', 'Linux Learner', 'Open Source Lover'],
+      typeSpeed: 60,
+      backSpeed: 30,
+      loop: true
     });
 
     function toggleMode() {
-        document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('dark-mode');
     }
-</script>
+
     const lines = [
-    "aniruddha@github:~$ whoami",
-    "Aniruddha Panchal",
-    "aniruddha@github:~$ echo 'Building my future with code...'",
-    "Building my future with code...",
-    "aniruddha@github:~$ python3",
-    ">>> print('Welcome to my portfolio!')",
-    "'Welcome to my portfolio!'",
-    ">>> exit()"
-];
+      "aniruddha@github:~$ whoami",
+      "Aniruddha Panchal",
+      "aniruddha@github:~$ echo 'Building my future with code...'",
+      "Building my future with code...",
+      "aniruddha@github:~$ python3",
+      ">>> print('Welcome to my portfolio!')",
+      "'Welcome to my portfolio!'",
+      ">>> exit()"
+    ];
 
-let i = 0;
-const terminal = document.getElementById('terminal-content');
+    let i = 0;
+    const terminal = document.getElementById('terminal-content');
 
-function typeLine() {
-    if (i < lines.length) {
+    function typeLine() {
+      if (i < lines.length) {
         const line = document.createElement('p');
         line.textContent = lines[i++];
         terminal.appendChild(line);
         setTimeout(typeLine, 1000);
+      }
     }
-}
 
-typeLine();
+    typeLine();
+  </script>
 
-</body> 
-    <div class="terminal">
-    <div class="terminal-header">Terminal</div>
-    <div id="terminal-content"></div>
-</div>
+</body>
 </html>
