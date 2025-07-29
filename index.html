@@ -82,6 +82,24 @@
             border: none;
         }
     </style>
+    .terminal {
+    background: #111;
+    color: #33ff33;
+    text-align: left;
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: monospace;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #33ff33;
+}
+
+.terminal-header {
+    color: #fff;
+    background: #222;
+    padding: 5px 10px;
+    font-weight: bold;
+}
 </head>
 <body>
 
@@ -116,6 +134,34 @@
         document.body.classList.toggle('dark-mode');
     }
 </script>
+    const lines = [
+    "aniruddha@github:~$ whoami",
+    "Aniruddha Panchal",
+    "aniruddha@github:~$ echo 'Building my future with code...'",
+    "Building my future with code...",
+    "aniruddha@github:~$ python3",
+    ">>> print('Welcome to my portfolio!')",
+    "'Welcome to my portfolio!'",
+    ">>> exit()"
+];
 
-</body>
+let i = 0;
+const terminal = document.getElementById('terminal-content');
+
+function typeLine() {
+    if (i < lines.length) {
+        const line = document.createElement('p');
+        line.textContent = lines[i++];
+        terminal.appendChild(line);
+        setTimeout(typeLine, 1000);
+    }
+}
+
+typeLine();
+
+</body> 
+    <div class="terminal">
+    <div class="terminal-header">Terminal</div>
+    <div id="terminal-content"></div>
+</div>
 </html>
