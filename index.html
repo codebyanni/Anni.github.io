@@ -27,7 +27,6 @@
       transition: 0.3s;
     }
 
-    /* Toggle Theme Button */
     .toggle-btn {
       position: fixed;
       top: 15px;
@@ -38,9 +37,9 @@
       color: white;
       border-radius: 20px;
       cursor: pointer;
+      z-index: 10;
     }
 
-    /* Header with Left Image */
     .profile-header {
       display: flex;
       align-items: center;
@@ -62,8 +61,7 @@
       object-fit: cover;
       transition: transform 0.5s;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      border: 5px solid #0077ff;
-      background: linear-gradient(135deg, #0077ff, #00c3ff);
+      border: none; /* ✅ No blue ring */
     }
 
     .profile-pic:hover {
@@ -74,7 +72,7 @@
     .profile-right h1 {
       margin: 0;
       font-size: 32px;
-      color: var(--primary);
+      color: var(--text); /* ✅ Auto theme color */
     }
 
     .profile-right .tagline {
@@ -83,7 +81,6 @@
       margin-top: 10px;
     }
 
-    /* Navbar */
     .nav {
       margin: 20px 0;
       text-align: center;
@@ -96,7 +93,6 @@
       font-weight: bold;
     }
 
-    /* Project Section */
     .section {
       max-width: 1000px;
       margin: auto;
@@ -136,7 +132,6 @@
       font-weight: bold;
     }
 
-    /* Footer */
     footer {
       text-align: center;
       padding: 20px;
@@ -162,7 +157,7 @@
     </div>
     <div class="profile-right">
       <h1>Aniruddha Panchal</h1>
-      <p class="tagline">Python, C, C++, Linux learner & BCA student</p>
+      <p class="tagline">Python, C, C++, Java, Linux learner & BCA student</p>
     </div>
   </header>
 
