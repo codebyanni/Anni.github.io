@@ -3,260 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aniruddha Panchal - Portfolio</title>
-
-  <!-- Fonts & Icons -->
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-
+  <title>Aniruddha Panchal - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #000000;
-      --primary: #0077ff;
-      --card: #f4f4f4;
-    }
-
-    body.dark {
-      --bg: #121212;
-      --text: #ffffff;
-      --card: #1e1e1e;
+      --light-bg: #f4f4f4;
+      --dark-bg: #121212;
+      --light-text: #111;
+      --dark-text: #fff;
     }
 
     body {
       margin: 0;
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Segoe UI', sans-serif;
-      transition: 0.3s;
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--light-bg);
+      color: var(--light-text);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--dark-text);
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 50px;
+      max-width: 1000px;
+      margin: auto;
+      align-items: center;
+    }
+
+    .photo {
+      flex: 1;
+      text-align: center;
+    }
+
+    .photo img {
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .content {
+      flex: 2;
+      padding: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    h2 {
+      font-size: 22px;
+      color: #2196f3;
+    }
+
+    ul {
+      padding-left: 20px;
     }
 
     .toggle-btn {
       position: fixed;
-      top: 15px;
-      right: 15px;
-      padding: 8px 14px;
+      top: 20px;
+      right: 20px;
+      padding: 10px 15px;
       border: none;
-      background: var(--primary);
-      color: white;
       border-radius: 20px;
       cursor: pointer;
-      z-index: 10;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    .profile {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
-      text-align: left;
-    }
-
-    .profile img {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      border: none;
-      transition: transform 0.5s;
-    }
-
-    .profile img:hover {
-      transform: rotateY(10deg) rotateX(5deg) scale(1.05);
-    }
-
-    .profile-text h1 {
-      font-size: 32px;
-      margin: 0;
-      color: var(--text);
-    }
-
-    .profile-text .typed {
-      color: var(--primary);
-      font-weight: bold;
-    }
-
-    .nav {
-      text-align: center;
-      margin: 30px 0;
-    }
-
-    .nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: bold;
-    }
-
-    .section h2 {
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 5px;
-      margin-bottom: 20px;
-    }
-
-    .skills {
-      margin-bottom: 40px;
-    }
-
-    .skill {
-      margin-bottom: 15px;
-    }
-
-    .skill-name {
-      font-weight: bold;
-    }
-
-    .bar {
-      background: #ddd;
-      height: 8px;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
-    .progress {
-      height: 100%;
-      background: var(--primary);
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: var(--primary);
-    }
-
-    .card a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: bold;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 14px;
-      color: gray;
-    }
-
-    .float-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--primary);
+      background: #2196f3;
       color: white;
-      padding: 14px;
-      border-radius: 50%;
-      font-size: 18px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.3);
-      z-index: 100;
     }
 
-    @media (max-width: 600px) {
-      .profile {
-        flex-direction: column;
-        text-align: center;
-      }
+    .section {
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
-
-  <button class="toggle-btn" onclick="document.body.classList.toggle('dark')">Toggle Theme</button>
-
-  <a href="mailto:your@email.com" class="float-btn" title="Contact Me">
-    <i class="fas fa-envelope"></i>
-  </a>
+  <button class="toggle-btn" onclick="toggleMode()">Toggle Theme</button>
 
   <div class="container">
-    <div class="profile">
-      <img src="IMG_4843.jpeg" alt="Profile Photo" />
-      <div class="profile-text">
-        <h1>Aniruddha Panchal</h1>
-        <span class="typed" id="typed"></span>
-      </div>
+    <div class="photo">
+      <img src="your-photo.jpg" alt="Aniruddha Panchal" />
     </div>
+    <div class="content">
+      <h1>Aniruddha Panchal</h1>
+      <h2>💻 BCA Student | Python Developer | Linux Enthusiast</h2>
 
-    <div class="nav">
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-    </div>
+      <div class="section">
+        <strong>📍 Location:</strong> Khachrod, Ujjain  
+        <br />
+        <strong>📧 Email:</strong> aniruddhapanchal91@gmail.com  
+        <br />
+        <strong>📞 Phone:</strong> 8965XXXXXX
+      </div>
 
-    <div class="section skills" id="skills">
-      <h2>Skills</h2>
-      <div class="skill">
-        <div class="skill-name">Python</div>
-        <div class="bar"><div class="progress" style="width: 85%;"></div></div>
+      <div class="section">
+        <h3>🎯 Objective</h3>
+        <p>To work in a challenging environment that encourages continuous learning and growth, and where I can apply my skills in software development, Linux, and open-source contribution to create impactful solutions.</p>
       </div>
-      <div class="skill">
-        <div class="skill-name">Linux</div>
-        <div class="bar"><div class="progress" style="width: 75%;"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-name">HTML/CSS/JS</div>
-        <div class="bar"><div class="progress" style="width: 80%;"></div></div>
-      </div>
-    </div>
 
-    <div class="section projects" id="projects">
-      <h2>Projects</h2>
-      <div class="card">
-        <h3><i class="fas fa-code"></i> Project 1</h3>
-        <p>A tool built with HTML, CSS, and JS.</p>
-        <a href="https://github.com/codebyanni/project1" target="_blank">View Project</a>
+      <div class="section">
+        <h3>🧠 Skills</h3>
+        <ul>
+          <li>Python Programming</li>
+          <li>Linux (Ubuntu)</li>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Git & GitHub</li>
+          <li>Bash Scripting</li>
+        </ul>
       </div>
-      <div class="card">
-        <h3><i class="fas fa-laptop-code"></i> Project 2</h3>
-        <p>Linux automation script using Python.</p>
-        <a href="https://github.com/codebyanni/project2" target="_blank">View Project</a>
-      </div>
-    </div>
 
-    <div class="footer">
-      &copy; 2025 Aniruddha Panchal | Built with ❤️ in HTML
+      <div class="section">
+        <h3>🎓 Education</h3>
+        <ul>
+          <li><strong>BCA</strong> – Govt. Madhav scince collage, ujjain (Pursuing)</li>
+          <li><strong>12th</strong> – Saraswati Shishu Vidya Mandir, Khachrod (2023, 45%)</li>
+          <li><strong>10th</strong> – Saraswati Shishu Vidya Mandir, School Khachrod (2019, 56%)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>💻 Projects</h3>
+        <ul>
+          <li><a href="https://codebyanni.github.io" target="_blank">Portfolio Website</a></li>
+          <li><a href="https://github.com/codebyanni" target="_blank">GitHub Repositories</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>🌐 Languages</h3>
+        Hindi, English
+      </div>
     </div>
   </div>
 
   <script>
-    new Typed("#typed", {
-      strings: ["Web Developer", "Linux Enthusiast", "Python Coder", "Open Source Learner"],
-      typeSpeed: 60,
-      backSpeed: 30,
-      loop: true,
-    });
-
-    ScrollReveal().reveal('.card', {
-      delay: 300,
-      distance: '50px',
-      origin: 'bottom',
-      duration: 800
-    });
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+    }
   </script>
-
 </body>
 </html>
